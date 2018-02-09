@@ -9,19 +9,23 @@ public class Date {
 	public static void main(String[] args) {
 			
 			String input;
+			
 			int month,
 				day,
 				year,
 				validDay;
 			
+			boolean leapYear;
 
 			input = JOptionPane.showInputDialog("Enter the Year");
 			year = Integer.parseInt(input);
 			
-			if(year<=10000) {
+			if(year>=10000) {
+				JOptionPane.showMessageDialog(null, year + " is not valid year");
+			}
+			if() {
 				
 			}
-			
 			
 			input = JOptionPane.showInputDialog("Enter the Month");
 			month = Integer.parseInt(input);
