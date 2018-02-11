@@ -65,13 +65,13 @@ public class Date {
 			maxDays = 31;
 		} else if (month == 4) {
 			monthWord = "April";
-			maxDays = 31;
+			maxDays = 30;
 		} else if (month == 5) {
 			monthWord = "May";
 			maxDays = 31;
 		} else if (month == 6) {
 			monthWord = "June";
-			maxDays = 31;
+			maxDays = 30;
 		} else if (month == 7) {
 			monthWord = "July";
 			maxDays = 31;
@@ -80,13 +80,13 @@ public class Date {
 			maxDays = 31;
 		} else if (month == 9) {
 			monthWord = "September";
-			maxDays = 31;
+			maxDays = 30;
 		} else if (month == 10) {
 			monthWord = "October";
 			maxDays = 31;
 		} else if (month == 11) {
 			monthWord = "November";
-			maxDays = 31;
+			maxDays = 30;
 		} else if (month == 12) {
 			monthWord = "December";
 			maxDays = 31;
