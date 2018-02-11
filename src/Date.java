@@ -2,6 +2,9 @@ import javax.swing.JOptionPane;
 
 /*
  * Jonathan Meredith
+ * This program gets input from the user regarding the date they want to 
+ * display. It has some basic error checking and it displays the result 
+ * in the format January 1, 1999.
  */
 
 public class Date {
@@ -9,9 +12,14 @@ public class Date {
 	public static void main(String[] args) {
 		
 		//Declared Variables
-		String input, monthWord, message;
+		String input,
+			monthWord,
+			message;
 
-		int month, day, year, validDay, maxDays;
+		int month,
+			day,
+			year,
+			maxDays;
 
 		boolean leapYear;
 
