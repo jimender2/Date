@@ -9,12 +9,14 @@ public class Date {
 	public static void main(String[] args) {
 			
 			String input,
-				monthWord;
+				monthWord,
+				message;
 			
 			int month,
 				day,
 				year,
-				validDay;
+				validDay,
+				maxDays;
 			
 			boolean leapYear;
 
@@ -39,13 +41,53 @@ public class Date {
 					System.exit(0);
 			}
 			
-			if 
+			if (month == 1) {
+				monthWord = "January";
+				maxDays = 31;
+			} else if (month == 2) {
+				monthWord = "Febuary";
+						if (leapYear == true) {
+							maxDays = 29;
+						} else {
+							maxDays = 28;
+						}
+			} else if (month == 3) {
+				monthWord = "March";
+				maxDays = 31;
+			} else if (month == 4) {
+				monthWord = "April";
+				maxDays = 31;
+			} else if (month == 5) {
+				monthWord = "May";
+				maxDays = 31;
+			} else if (month == 6) {
+				monthWord = "June";
+				maxDays = 31;
+			} else if (month == 7) {
+				monthWord = "July";
+				maxDays = 31;
+			} else if (month == 8) {
+				monthWord = "August";
+				maxDays = 31;
+			} else if (month == 9) {
+				monthWord = "September";
+				maxDays = 31;
+			} else if (month == 10) {
+				monthWord = "October";
+				maxDays = 31;
+			} else if (month == 11) {
+				monthWord = "November";
+				maxDays = 31;
+			} else if (month == 12) {
+				monthWord = "December";
+				maxDays = 31;
+			}
 			
 			input = JOptionPane.showInputDialog("Enter the Day");
 			day = Integer.parseInt(input);
-
-			input = JOptionPane.showInputDialog("Enter the Year");
-			month = Integer.parseInt(input);
+			
+			JOptionPane.showMessageDialog(null, monthWord + " " + day + ", " + year);
+			
 
 	}
 
