@@ -8,7 +8,8 @@ public class Date {
 
 	public static void main(String[] args) {
 			
-			String input;
+			String input,
+				monthWord;
 			
 			int month,
 				day,
@@ -22,9 +23,12 @@ public class Date {
 			
 			if(year>=10000) {
 				JOptionPane.showMessageDialog(null, year + " is not valid year");
+				System.exit(0);
 			}
-			if() {
-				
+			if(year%4==0) {
+				leapYear = true;
+			} else {
+				leapYear = false;
 			}
 			
 			input = JOptionPane.showInputDialog("Enter the Month");
@@ -32,7 +36,10 @@ public class Date {
 			
 			if(!(1>=month || month<=12)) {
 					JOptionPane.showMessageDialog(null, "Not valid");
+					System.exit(0);
 			}
+			
+			if 
 			
 			input = JOptionPane.showInputDialog("Enter the Day");
 			day = Integer.parseInt(input);
