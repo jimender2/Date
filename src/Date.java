@@ -7,46 +7,59 @@ import javax.swing.JOptionPane;
 public class Date {
 
 	public static void main(String[] args) {
-
+		
+		//Declared Variables
 		String input, monthWord, message;
 
 		int month, day, year, validDay, maxDays;
 
 		boolean leapYear;
 
+		//Can I get rid of these?
 		monthWord = "error";
+		maxDays = 0;
 		
+		//Get the year
 		input = JOptionPane.showInputDialog("Enter the Year");
 		year = Integer.parseInt(input);
 
+		//Check if Year is Valid
 		if (year >= 10000) {
 			JOptionPane.showMessageDialog(null, year + " is not valid year");
 			System.exit(0);
 		}
+		
+		//Check if Year is Leap Year
 		if (year % 4 == 0) {
 			leapYear = true;
 		} else {
 			leapYear = false;
 		}
 
+		//Get the Month
 		input = JOptionPane.showInputDialog("Enter the Month");
 		month = Integer.parseInt(input);
 
+		//Check if Month is valid
 		if (!(1 >= month || month <= 12)) {
 			JOptionPane.showMessageDialog(null, "Not valid");
 			System.exit(0);
 		}
 
+		//Set the month equal to its name and get max days
 		if (month == 1) {
 			monthWord = "January";
 			maxDays = 31;
 		} else if (month == 2) {
 			monthWord = "Febuary";
+			
+			//Fix for maxDays due to leapYear
 			if (leapYear == true) {
 				maxDays = 29;
 			} else {
 				maxDays = 28;
 			}
+			
 		} else if (month == 3) {
 			monthWord = "March";
 			maxDays = 31;
@@ -79,10 +92,18 @@ public class Date {
 			maxDays = 31;
 		}
 
+		//Get the Day
 		input = JOptionPane.showInputDialog("Enter the Day");
 		day = Integer.parseInt(input);
-
-		JOptionPane.showMessageDialog(null,	monthWord + " " + day + ", " + year);
+		
+		//Check if Day is Valid
+		if (maxDays < day) {
+			JOptionPane.showMessageDialog(null, day + " is not a valid day");
+			System.exit(0);
+		}
+		
+		message = " " + day + ", " + year;
+		JOptionPane.showMessageDialog(null,	monthWord + message);
 
 	}
 
