@@ -23,11 +23,11 @@ public class Date {
 
 		boolean leapYear;
 
-		//Can I get rid of these?
+		//Initialize some variables.
 		monthWord = "error";
 		maxDays = 0;
 		
-		//Get the year
+		//Get the year from the user
 		input = JOptionPane.showInputDialog("Enter the Year");
 		year = Integer.parseInt(input);
 
@@ -44,7 +44,7 @@ public class Date {
 			leapYear = false;
 		}
 
-		//Get the Month
+		//Get the Month from the user
 		input = JOptionPane.showInputDialog("Enter the Month");
 		month = Integer.parseInt(input);
 
@@ -100,7 +100,7 @@ public class Date {
 			maxDays = 31;
 		}
 
-		//Get the Day
+		//Get the Day from the user
 		input = JOptionPane.showInputDialog("Enter the Day");
 		day = Integer.parseInt(input);
 		
@@ -110,7 +110,10 @@ public class Date {
 			System.exit(0);
 		}
 		
+		//Compile the message into a variable
 		message = " " + day + ", " + year;
+		
+		//Display the Date
 		JOptionPane.showMessageDialog(null,	monthWord + message);
 
 	}
